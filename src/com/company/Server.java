@@ -9,14 +9,28 @@ import java.util.Scanner;
 public class Server {
     public static void main(String args[]) throws IOException{
         String respond;
+        int port = 1410;
 
-        ServerSocket serverSocket = new ServerSocket(1410);
-        Socket socket = serverSocket.accept();
+        System.out.println("server is running at port " + port);
 
-        Scanner scanner = new Scanner(socket.getInputStream());
-        respond = "hello " +  scanner.nextLine();
+        ServerSocket serverSocket = null;
+        try{
+            serverSocket = new ServerSocket(port);
 
-        PrintStream serverRespond = new PrintStream(socket.getOutputStream());
-        serverRespond.println(respond);
+            while(true){
+                Socket socket = serverSocket.accept();
+                //thread
+                new ServerThread((socket)).start();
+            }
+        }catch(Exception e){
+            System.err.println((e));
+        }finally{
+            if (serverSocket != null)
+                try {
+                    serverSocket.close();
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
+        }
     }
 }
