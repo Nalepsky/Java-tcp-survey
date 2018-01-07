@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f00538a-9cc4-4938-a5dc-eed1734a0b7c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/Quiz.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/company/QuizQuestion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-tcp-survey/com/company/Client.class" afterPath="$PROJECT_DIR$/out/production/Java-tcp-survey/com/company/Client.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Client.java" afterPath="$PROJECT_DIR$/src/com/company/Client.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/ServerThread.java" afterPath="$PROJECT_DIR$/src/com/company/ServerThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/questions.txt" afterPath="$PROJECT_DIR$/questions.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Quiz.java" afterPath="$PROJECT_DIR$/src/com/company/Quiz.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +17,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.41933638">
       <split-first>
         <leaf>
-          <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/company/Client.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="459">
@@ -31,11 +27,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Quiz.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Quiz.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/company/Quiz.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="578">
-                  <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+                <state relative-caret-position="408">
+                  <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -122,9 +118,9 @@
         <option value="$PROJECT_DIR$/src/com/company/SueveyQuestion.java" />
         <option value="$PROJECT_DIR$/src/com/company/questions.txt" />
         <option value="$PROJECT_DIR$/src/com/company/QuizQuestion.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Quiz.java" />
         <option value="$PROJECT_DIR$/src/com/company/Client.java" />
         <option value="$PROJECT_DIR$/src/com/company/ServerThread.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Quiz.java" />
       </list>
     </option>
   </component>
@@ -340,12 +336,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515266673954</updated>
-      <workItem from="1515266676862" duration="12830000" />
+      <workItem from="1515266676862" duration="13238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12830000" />
+    <option name="totallyTimeSpent" value="13238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -450,16 +446,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Quiz.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="42" lean-forward="false" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -472,6 +458,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
           <caret line="36" column="83" lean-forward="false" selection-start-line="36" selection-start-column="83" selection-end-line="36" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Quiz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -19,6 +19,10 @@ public class Quiz {
     }
 
     public String getNextQuestion(){
+
+        if(!readInput.hasNextLine())
+            return "";
+
         String question = readInput.nextLine();
         String  aAnswer = readInput.nextLine();
         String  bAnswer = readInput.nextLine();
