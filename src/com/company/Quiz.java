@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class Quiz {
     private String name,
-            correctAnswer;
+                correctAnswer,
+                answers;
     private int score;
     private File questionInput;
     private Scanner readInput;
@@ -14,6 +15,7 @@ public class Quiz {
     public Quiz(String name) throws FileNotFoundException {
         this.name = name;
         this.score = 0;
+        this.answers = "";
         this.questionInput = new File("questions.txt");
         this.readInput = new Scanner(questionInput);
     }
@@ -34,10 +36,30 @@ public class Quiz {
     }
 
     public String checkAnswer(String answer){
+        answers += answer + ", ";
+
         if(answer.equals(correctAnswer)){
             score++;
             return "you have chosen wisely!";
         }
             return "you have chosen poorly!";
+    }
+
+    public boolean endOfQuiz(){
+        if (readInput.hasNextLine())
+            return false;
+        return true;
+    }
+
+    public String answersSummary(){
+        return name + ": " + answers;
+    }
+
+    public String scoreSummary(){
+        return name + ": " + score;
+    }
+
+    public int getScore() {
+        return score;
     }
 }

@@ -1,9 +1,6 @@
 package com.company;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
+import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
@@ -13,36 +10,46 @@ public class ServerThread extends Thread  {
     private String dataOut;
     private Quiz quiz;
     private boolean firstDataFlag;
+    private boolean endOfQuiz;
 
     public ServerThread(Socket serverSocket) {
         this.serverSocket = serverSocket;
         this.firstDataFlag = true;
     }
 
-    public void run(){
+    public void run() {
 
         try {
             BufferedReader input = new BufferedReader(new InputStreamReader(serverSocket.getInputStream()));
             PrintStream serverRespond = new PrintStream(serverSocket.getOutputStream());
+            endOfQuiz = false;
 
-            while (!(dataIn = input.readLine()).equals("exit")){
-                if(firstDataFlag){
+            while (!(dataIn = input.readLine()).equals("exit") && !endOfQuiz) {
+
+                if (firstDataFlag) {
                     quiz = new Quiz(dataIn);
                     firstDataFlag = false;
                     dataOut = "hello " + dataIn + "!";
-                    dataOut +="\n\n" + quiz.getNextQuestion() + "\neol";
+                    dataOut += "\n\n" + quiz.getNextQuestion() + "\neol";
                     serverRespond.println(dataOut);
-                }else{
-                    dataOut = quiz.checkAnswer(dataIn);
-                    serverRespond.println(dataOut + "\n" + quiz.getNextQuestion() + "\neol");
-                    System.out.println(dataOut);
+                } else {
+                    if (quiz.endOfQuiz()) {
+                        dataOut = quiz.checkAnswer(dataIn);
+                        serverRespond.println((dataOut + "\nyour score is: " + quiz.getScore() + "\neol"));
+                        SingletonWriter.getInstance().writeToAnswers(quiz.answersSummary());
+                        SingletonWriter.getInstance().writeToResults(quiz.scoreSummary());
+                    }else {
+                        dataOut = quiz.checkAnswer(dataIn);
+                        serverRespond.println(dataOut + "\n" + quiz.getNextQuestion() + "\neol");
+                    }
                 }
             }
-
             serverSocket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
+            System.out.println("end");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

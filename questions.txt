@@ -10,3 +10,9 @@ b) 9,8 m/s^2
 c) 9,9 m/s^2
 d) 10,1 m/s^2
 b
+What is the biggest country in the world?
+a) San Marino
+b) USA
+c) Russia
+d) China
+c
