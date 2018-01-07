@@ -10,7 +10,6 @@ public class ServerThread extends Thread  {
     private String dataOut;
     private Quiz quiz;
     private boolean firstDataFlag;
-    private boolean endOfQuiz;
 
     public ServerThread(Socket serverSocket) {
         this.serverSocket = serverSocket;
@@ -22,10 +21,8 @@ public class ServerThread extends Thread  {
         try {
             BufferedReader input = new BufferedReader(new InputStreamReader(serverSocket.getInputStream()));
             PrintStream serverRespond = new PrintStream(serverSocket.getOutputStream());
-            endOfQuiz = false;
 
-            while (!(dataIn = input.readLine()).equals("exit") && !endOfQuiz) {
-
+            while (!(dataIn = input.readLine()).equals("exit")) {
                 if (firstDataFlag) {
                     quiz = new Quiz(dataIn);
                     firstDataFlag = false;
@@ -38,6 +35,8 @@ public class ServerThread extends Thread  {
                         serverRespond.println((dataOut + "\nyour score is: " + quiz.getScore() + "\neol"));
                         SingletonWriter.getInstance().writeToAnswers(quiz.answersSummary());
                         SingletonWriter.getInstance().writeToResults(quiz.scoreSummary());
+
+                        break;
                     }else {
                         dataOut = quiz.checkAnswer(dataIn);
                         serverRespond.println(dataOut + "\n" + quiz.getNextQuestion() + "\neol");
