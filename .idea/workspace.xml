@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f00538a-9cc4-4938-a5dc-eed1734a0b7c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-tcp-survey/com/company/Quiz.class" afterPath="$PROJECT_DIR$/out/production/Java-tcp-survey/com/company/Quiz.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-tcp-survey/com/company/Client.class" afterPath="$PROJECT_DIR$/out/production/Java-tcp-survey/com/company/Client.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Java-tcp-survey/com/company/ServerThread.class" afterPath="$PROJECT_DIR$/out/production/Java-tcp-survey/com/company/ServerThread.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Client.java" afterPath="$PROJECT_DIR$/src/com/company/Client.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/ServerThread.java" afterPath="$PROJECT_DIR$/src/com/company/ServerThread.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -21,14 +22,14 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4313501">
+    <splitter split-orientation="horizontal" split-proportion="0.51201373">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/company/Client.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="459">
-                  <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+                <state relative-caret-position="374">
+                  <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -103,8 +104,8 @@
           <file leaf-file-name="ServerThread.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/company/ServerThread.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="64">
-                  <caret line="22" column="88" lean-forward="false" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
+                <state relative-caret-position="402">
+                  <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -142,13 +143,13 @@
         <option value="$PROJECT_DIR$/src/com/company/SueveyQuestion.java" />
         <option value="$PROJECT_DIR$/src/com/company/questions.txt" />
         <option value="$PROJECT_DIR$/src/com/company/QuizQuestion.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Client.java" />
         <option value="$PROJECT_DIR$/src/com/company/Writer.java" />
         <option value="$PROJECT_DIR$/src/com/company/Singleton.java" />
         <option value="$PROJECT_DIR$/src/com/company/Server.java" />
         <option value="$PROJECT_DIR$/src/com/company/SingletonWriter.java" />
         <option value="$PROJECT_DIR$/src/com/company/Quiz.java" />
         <option value="$PROJECT_DIR$/src/com/company/ServerThread.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Client.java" />
       </list>
     </option>
   </component>
@@ -365,12 +366,12 @@
       <option name="presentableId" value="Default" />
       <updated>1515266673954</updated>
       <workItem from="1515266676862" duration="13424000" />
-      <workItem from="1515333786371" duration="10269000" />
+      <workItem from="1515333786371" duration="12896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23693000" />
+    <option name="totallyTimeSpent" value="26320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -378,7 +379,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -559,21 +560,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="30" column="45" lean-forward="false" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/ServerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="22" column="88" lean-forward="false" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
+        <state relative-caret-position="402">
+          <caret line="36" column="32" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

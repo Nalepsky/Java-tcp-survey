@@ -22,7 +22,8 @@ public class ServerThread extends Thread  {
             BufferedReader input = new BufferedReader(new InputStreamReader(serverSocket.getInputStream()));
             PrintStream serverRespond = new PrintStream(serverSocket.getOutputStream());
 
-            while (!(dataIn = input.readLine()).equals("exit")) {
+            while (true) {
+                dataIn = input.readLine();
                 if (firstDataFlag) {
                     quiz = new Quiz(dataIn);
                     firstDataFlag = false;
@@ -32,7 +33,8 @@ public class ServerThread extends Thread  {
                 } else {
                     if (quiz.endOfQuiz()) {
                         dataOut = quiz.checkAnswer(dataIn);
-                        serverRespond.println((dataOut + "\nyour score is: " + quiz.getScore() + "\neol"));
+                        serverRespond.println((dataOut + "\nyour score is: " + quiz.getScore()
+                                + "\npress any key + enter to exit" + "\neol"));
                         SingletonWriter.getInstance().writeToAnswers(quiz.answersSummary());
                         SingletonWriter.getInstance().writeToResults(quiz.scoreSummary());
 
@@ -43,6 +45,7 @@ public class ServerThread extends Thread  {
                     }
                 }
             }
+            serverRespond.println("end");
             serverSocket.close();
             System.out.println("end");
         } catch (FileNotFoundException e) {
