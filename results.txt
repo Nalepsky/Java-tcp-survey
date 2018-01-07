@@ -1,0 +1,3 @@
+Bruno: 2
+Racoon: 2
+Alladyn: 3
