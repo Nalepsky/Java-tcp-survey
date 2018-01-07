@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args){
-        String name,
-                respond;
+        String inputData,
+                respond,
+                newLine;
         int port = 1410;
         Socket socket;
         Scanner nameScanner;
@@ -16,16 +17,21 @@ public class Client {
             nameScanner = new Scanner(System.in);
             socket = new Socket("127.0.0.1", port);
             Scanner serverScanner = new Scanner(socket.getInputStream());
+            PrintStream serverPrint = new PrintStream(socket.getOutputStream());
 
             System.out.println("please, enter your name");
-            name = nameScanner.nextLine();
 
-            PrintStream serverPrint = new PrintStream(socket.getOutputStream());
-            serverPrint.println(name);
-            respond = serverScanner.nextLine();
+            for (int i = 0; i<10; i++) {
+                inputData = nameScanner.nextLine();
+                serverPrint.println(inputData);
+                respond = "";
+                newLine = "";
 
-            System.out.println(respond);
-
+                while(!(newLine = serverScanner.nextLine()).equals("eol")){
+                    respond += newLine + "\n";
+                }
+                System.out.println(respond);
+            }
             nameScanner.close();
             socket.close();
         }catch (IOException e){
