@@ -2,13 +2,12 @@ package com.company;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.Scanner;
 
 public class ServerThread extends Thread  {
     private Socket serverSocket;
     private String dataIn;
     private String dataOut;
-    private Quiz quiz;
+    private Survey quiz;
     private boolean firstDataFlag;
 
     public ServerThread(Socket serverSocket) {
@@ -25,15 +24,15 @@ public class ServerThread extends Thread  {
             while (true) {
                 dataIn = input.readLine();
                 if (firstDataFlag) {
-                    quiz = new Quiz(dataIn);
+                    quiz = new Survey(dataIn);
                     firstDataFlag = false;
                     dataOut = "hello " + dataIn + "!";
                     dataOut += "\n\n" + quiz.getNextQuestion() + "\neol";
                     serverRespond.println(dataOut);
                 } else {
-                    if (quiz.endOfQuiz()) {
+                    if (quiz.endOfSurvey()) {
                         dataOut = quiz.checkAnswer(dataIn);
-                        serverRespond.println((dataOut + "\nyour score is: " + quiz.getScore()
+                        serverRespond.println((dataOut + "\nResult is: " + quiz.getScore()
                                 + "\npress any key + enter to exit" + "\neol"));
                         SingletonWriter.getInstance().writeToAnswers(quiz.answersSummary());
                         SingletonWriter.getInstance().writeToResults(quiz.scoreSummary());

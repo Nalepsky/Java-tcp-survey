@@ -1,3 +1,5 @@
 Bruno: 2
 Racoon: 2
 Alladyn: 3
+Marek: 4
+Bruno: 5

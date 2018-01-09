@@ -1,3 +1,5 @@
 Bruno: a, b, c, 
 Racoon: a, b, c, 
 Alladyn: d, b, c, 
+Marek: a, v, c, 
+Bruno: a, b, d, 

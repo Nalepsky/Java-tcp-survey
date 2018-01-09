@@ -1,18 +1,15 @@
-What was the name of the last emperor of Byzantine Empire
-a) Justinian the Great
-b) Heraclius
-c) Michael VIII
-d) Constantine XI
-d
-What is the value of the standard gravity
-a) 10 m/s^2
-b) 9,8 m/s^2
-c) 9,9 m/s^2
-d) 10,1 m/s^2
-b
-What is the biggest country in the world?
-a) San Marino
-b) USA
-c) Russia
-d) China
-c
+Do you like our café?
+a) absolutely yes!
+b) yes
+c) no
+d) are you kidding me?
+Our food is?
+a) delicious
+b) good
+c) ok
+d) distasteful
+Would you recommend us to your friends?
+a) absolutely yes!
+b) yes
+c) no
+d) are you kidding me?
